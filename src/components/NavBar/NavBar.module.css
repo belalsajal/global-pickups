@@ -1,0 +1,177 @@
+/* NavBar.module.css */
+.navBar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 5%;
+  background-color: #1A3C5E;
+  background: linear-gradient(135deg, rgba(26, 60, 94, 0.95) 0%, rgba(54, 98, 234, 0.9) 100%);
+  border-bottom: 2px solid transparent;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  transition: all 0.3s ease;
+}
+
+.logoContainer {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  text-decoration: none;
+}
+
+.logo {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid rgba(255, 255, 255, 0.8);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease;
+}
+
+.logo:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+.brandName {
+  font-family: 'Poppins', sans-serif;
+  font-size: 36px;
+  font-weight: 700;
+  color: white;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.4);
+}
+
+.navLinks {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+
+.navLink {
+  text-decoration: none;
+  color: white;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  transition: color 0.3s ease;
+  text-shadow: 0px 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+.navLink:hover {
+  color: #4A90E2;
+}
+
+.loginButton, .signupButton {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 500;
+  font-size: 14px;
+  padding: 10px 0;
+  width: 120px;
+  height: 40px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+}
+
+.loginButton {
+  background-color: #F5F7FA;
+  color: #A9A9A9;
+}
+
+.loginButton:hover {
+  background-color: #E6F0FA;
+}
+
+.signupButton {
+  background-color: #4A90E2;
+  color: #FFFFFF;
+}
+
+.signupButton:hover {
+  background-color: #3A80D2;
+}
+
+.mobileMenuButton {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+  color: white;
+  text-shadow: 0px 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+.mobileMenu {
+  display: none;
+  flex-direction: column;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  position: absolute;
+  top: 100%;
+  left: 0;
+  padding: 20px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.mobileMenuActive {
+  display: flex;
+}
+
+.spacer {
+  height: 80px;
+  width: 100%;
+}
+
+/* Focus styles for accessibility */
+.navLink:focus, .loginButton:focus, .signupButton:focus, .mobileMenuButton:focus {
+  outline: 2px solid #4A90E2;
+  outline-offset: 2px;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+  .logoContainer {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .logo {
+    width: 100px;
+  }
+
+  .brandName {
+    font-size: 28px;
+    margin-top: 5px;
+  }
+
+  .navLinks {
+    display: none;
+  }
+
+  .mobileMenuButton {
+    display: block;
+  }
+
+  .mobileMenu.mobileMenuActive {
+    display: flex;
+  }
+
+  .mobileMenu .navLink, 
+  .mobileMenu .loginButton, 
+  .mobileMenu .signupButton {
+    margin: 5px 0;
+  }
+
+  .spacer {
+    height: 120px;
+  }
+}

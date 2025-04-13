@@ -1,0 +1,95 @@
+.joinCommunity {
+  background-color: #1A3C5E;
+  padding: 50px 20px;
+  font-family: 'Poppins', sans-serif;
+  color: white;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.headline {
+  font-size: 32px;
+  font-weight: 700;
+  color: #FFFFFF;
+  margin-bottom: 20px;
+}
+
+.bodyText {
+  font-size: 16px;
+  font-weight: 400;
+  color: #FFFFFF;
+  max-width: 800px;
+  margin-bottom: 30px;
+  line-height: 1.6;
+}
+
+.buttonsContainer {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.createAccountButton, .exploreOptionsButton {
+  display: inline-block;
+  width: 150px;
+  height: 50px;
+  border-radius: 8px;
+  font-family: 'Poppins', sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 50px;
+  text-align: center;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.createAccountButton {
+  background-color: #4A90E2;
+  color: white;
+}
+
+.createAccountButton:hover {
+  background-color: #3A80D2;
+}
+
+.exploreOptionsButton {
+  background-color: white;
+  color: #666666;
+  border: 2px solid #4A90E2;
+}
+
+.exploreOptionsButton:hover {
+  background-color: #E6F0FA;
+}
+
+@media (max-width: 768px) {
+  .joinCommunity {
+    padding: 30px 15px;
+  }
+  
+  .headline {
+    font-size: 28px;
+  }
+  
+  .bodyText {
+    font-size: 14px;
+  }
+  
+  .buttonsContainer {
+    flex-direction: column;
+    gap: 10px;
+    width: 100%;
+    max-width: 250px;
+  }
+  
+  .createAccountButton, .exploreOptionsButton {
+    width: 100%;
+  }
+}
